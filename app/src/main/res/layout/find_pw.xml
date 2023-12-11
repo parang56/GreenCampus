@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:background="#EEF0EF">
+
+    <View
+        android:id="@+id/back_arrow"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/back_arrow"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:hint="이메일"
+        app:boxBackgroundMode="filled">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rectangle_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEF0EF"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/find_email_error_msg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textInputLayout_email"
+        android:layout_marginHorizontal="55dp"
+        android:layout_centerHorizontal="true"
+        android:text="존재하지 않는 이메일입니다."
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:visibility="invisible"
+        android:textColor="#D44646"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/find_pw_btn"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginHorizontal="49dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:background="#D3EBC0"
+        android:text="비밀번호 변경"
+        android:gravity="center"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF0EF"
+    android:onClick="OnClick"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="OnClick">
+
+            <TextView
+                android:id="@+id/mainTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="초록 캠퍼스"
+                android:textColor="#3B943B"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="오늘 날짜" />
+
+            <ImageButton
+                android:id="@+id/mainWriteButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/mainTitle"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:background="#EEF0EF"
+                android:scaleType="centerInside"
+                android:src="@drawable/write" />
+
+            <EditText
+                android:id="@+id/mainSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/now"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="45dp"
+                android:background="@drawable/rounded_rectangle"
+                android:hint="질문을 입력해주세요"
+                android:paddingStart="20dp"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textSize="14dp" />
+
+            <ImageButton
+                android:id="@+id/mainSearchBtn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignTop="@+id/mainSearch"
+                android:layout_alignRight="@+id/mainSearch"
+                android:layout_alignBottom="@+id/mainSearch"
+                android:layout_marginRight="10dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/search" />
+
+            <ImageButton
+                android:id="@+id/mainQuickButton2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/mainSearch"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="10dp"
+                android:background="#00FFFFFF"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/mainQuickButton5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/mainQuickButton2Text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#EEF0EF"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/mainQuickButton1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/mainSearch"
+                android:layout_alignTop="@+id/mainQuickButton2"
+                android:layout_toLeftOf="@+id/mainQuickButton2"
+                android:background="#EEF0EF"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:visibility="invisible"/>
+
+            <ImageButton
+                android:id="@+id/mainQuickButton3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/mainSearch"
+                android:layout_alignTop="@+id/mainQuickButton2"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/mainQuickButton2"
+                android:background="#EEF0EF"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/mainQuickButton4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/mainQuickButton2"
+                android:layout_alignTop="@+id/mainQuickButton5"
+                android:layout_toLeftOf="@+id/mainQuickButton2"
+                android:background="#EEF0EF"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/mainQuickButton6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/mainQuickButton2"
+                android:layout_alignTop="@+id/mainQuickButton5"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/mainQuickButton2"
+                android:background="#EEF0EF"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/mainQuickButton1Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainQuickButton1"
+                android:layout_alignStart="@+id/mainQuickButton1"
+                android:layout_alignEnd="@+id/mainQuickButton1"
+                android:layout_marginBottom="15dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/mainQuickButton2Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainQuickButton2"
+                android:layout_alignStart="@+id/mainQuickButton2"
+                android:layout_alignEnd="@+id/mainQuickButton2"
+                android:layout_marginBottom="15dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/mainQuickButton3Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainQuickButton3"
+                android:layout_alignStart="@+id/mainQuickButton3"
+                android:layout_alignEnd="@+id/mainQuickButton3"
+                android:layout_marginBottom="15dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/mainQuickButton4Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainQuickButton4"
+                android:layout_alignStart="@+id/mainQuickButton4"
+                android:layout_alignEnd="@+id/mainQuickButton4"
+                android:layout_marginBottom="15dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/mainQuickButton5Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainQuickButton5"
+                android:layout_alignStart="@+id/mainQuickButton5"
+                android:layout_alignEnd="@+id/mainQuickButton5"
+                android:layout_marginBottom="25dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/mainQuickButton6Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainQuickButton6"
+                android:layout_alignStart="@+id/mainQuickButton6"
+                android:layout_alignEnd="@+id/mainQuickButton6"
+                android:layout_marginBottom="15dp"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/todayQuestionsText"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_below="@+id/mainQuickButton5Text"
+                android:layout_marginHorizontal="40dp"
+                android:layout_centerHorizontal="true"
+                android:text="오늘의 인기 질문"
+                android:textSize="14sp"
+                android:layout_marginBottom="3dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/todayQuestionsMoreButton"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_below="@+id/mainQuickButton5Text"
+                android:layout_alignTop="@+id/todayQuestionsText"
+                android:layout_alignRight="@+id/todayQuestionsText"
+                android:layout_alignBottom="@+id/todayQuestionsText"
+                android:layout_centerHorizontal="true"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00FFFFFF"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:text="더보기 >"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/todayQuestions"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_below="@+id/todayQuestionsText">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/image"
+                    android:text="오늘은 없네요..."
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:layout_alignLeft="@+id/title"
+                    android:layout_toLeftOf="@+id/image"
+                    android:ellipsize="end"
+                    android:maxLines="2" />
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"/>
+
+                <ImageView
+                    android:id="@+id/heart_empty"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignLeft="@+id/title"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:scaleType="centerInside"
+                    android:visibility="invisible"
+                    android:src="@drawable/heart_empty" />
+
+                <TextView
+                    android:id="@+id/heartCnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/heart_empty"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/heart_empty" />
+
+                <ImageView
+                    android:id="@+id/answer"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignBottom="@+id/heart_empty"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/heartCnt"
+                    android:scaleType="centerInside"
+                    android:visibility="invisible"
+                    android:src="@drawable/answer" />
+
+                <TextView
+                    android:id="@+id/answerCnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/answer"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/answer" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#000000" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/quotes"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignStart="@+id/todayQuestions"
+                android:layout_alignEnd="@id/todayQuestions"
+                android:layout_below="@+id/todayQuestions"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginTop="25dp" />
+
+            <View
+                android:id="@+id/expBarMax"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_below="@+id/quotes"
+                android:layout_centerHorizontal="true"
+                android:background="#FFFFFF"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/expBar"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_alignStart="@+id/expBarMax"
+                android:layout_alignBottom="@+id/expBarMax"
+                android:background="#D3EBC0"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/expPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/expBarMax"
+                android:layout_alignTop="@id/expBarMax"
+                android:layout_alignBottom="@id/expBarMax"
+                android:layout_marginEnd="3dp"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="10dp"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/barMain"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#C0C0C0"
+            android:padding="2dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/main" />
+
+        <ImageButton
+            android:id="@+id/barScape"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#D9D9D9"
+            android:padding="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/scrap" />
+
+        <ImageButton
+            android:id="@+id/barNotification"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#D9D9D9"
+            android:scaleType="centerInside"
+            android:src="@drawable/notification" />
+
+        <ImageButton
+            android:id="@+id/barMyProfile"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#D9D9D9"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/my_profile" />
+
+    </LinearLayout>
+
+    <requestFocus />
+</LinearLayout>

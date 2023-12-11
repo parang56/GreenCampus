@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/splash_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/splash_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CarrotChegg"
+        tools:targetApi="31">
+
+        <activity android:name=".SplashScreenActivity"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <activity
+            android:name=".LoginScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RegistrationActivity">
+
+        </activity>
+
+        <activity android:name=".Terms_And_Conditions">
+
+        </activity>
+
+        <activity android:name=".TermsActivity">
+
+        </activity>
+
+        <activity android:name=".ConditionsActivity">
+
+        </activity>
+
+        <activity android:name=".FindIdActivity">
+
+        </activity>
+
+        <activity android:name=".FindPwActivity">
+
+        </activity>
+
+        <activity android:name=".MainMainActivity">
+
+        </activity>
+
+        <activity android:name=".MyProfileActivity">
+
+        </activity>
+
+        <activity android:name=".NotificationActivity">
+
+        </activity>
+
+        <activity android:name=".ScrapActivity">
+
+        </activity>
+
+
+        <activity
+            android:name=".SubjectSearchActivity"
+            android:windowSoftInputMode="stateVisible">
+        </activity>
+
+        <activity android:name=".TodayQuestionsActivity">
+
+        </activity>
+
+        <activity
+            android:name=".DetailOfQuestion">
+        </activity>
+
+        <activity
+            android:name=".WriteAns">
+        </activity>
+
+        <activity
+            android:name=".MakeQuestion">
+        </activity>
+
+        <activity
+            android:name=".DetailOfAnswer">
+        </activity>
+
+        <activity
+            android:name=".QuestionActivity"
+            />
+
+        <activity
+            android:name=".PostActivity"
+            />
+
+        <activity
+            android:name=".AnswerActivity"
+            />
+        <activity
+            android:name=".TestActivity"
+            />
+        <activity
+            android:name=".OtherProfileActivity"
+            />
+        <activity
+            android:name=".SearchActivity"
+            />
+        <activity
+            android:name=".AccuseActivity"
+            />
+    </application>
+</manifest>

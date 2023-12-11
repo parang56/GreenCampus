@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "740135058035",
+    "project_id": "fir-test-bcf9a",
+    "storage_bucket": "fir-test-bcf9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740135058035:android:b2ac57c2baa80f1dc00806",
+        "android_client_info": {
+          "package_name": "com.example.carrotchegg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740135058035-9jaqba57hpmckf5ltqnsq4brl6j3risd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.carrotchegg",
+            "certificate_hash": "8dff80d0d19772a5ba3653790634bce4121674b1"
+          }
+        },
+        {
+          "client_id": "740135058035-nm5f7oqr0tpaeocq4h7aqbrbbvjppfg2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.carrotchegg",
+            "certificate_hash": "4d6fb2a215ead66e7d54389ef8c066733ce5bf07"
+          }
+        },
+        {
+          "client_id": "740135058035-vj0guiaoullu4eqr94of8jv6a7u48ttt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.carrotchegg",
+            "certificate_hash": "b6dab66f41559ab44d5063faec3063a52bbe6dfe"
+          }
+        },
+        {
+          "client_id": "740135058035-p0orll8oqjn9f7361dekpengnsc1abo6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDag_SebQ3d0Z0TJaBnGLRvntR9QAu8Tg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740135058035-bdhlrem440rmbd4n78na78aaub5do8mk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

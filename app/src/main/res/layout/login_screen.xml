@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF0EF">
+
+    <View
+        android:id="@+id/logo"
+        android:layout_width="136dp"
+        android:layout_height="176dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/splash_logo"
+    />
+
+    <EditText
+        android:id="@+id/rectangle_id"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="175dp"
+        android:background="@drawable/rectangle_login"
+        android:hint="@string/login_hint_text"
+        android:gravity="center_vertical"
+        android:inputType="textEmailAddress|textPhonetic|textVisiblePassword"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+    />
+
+    <EditText
+        android:id="@+id/rectangle_pw"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="55dp"
+        android:layout_below="@+id/rectangle_id"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_login"
+        android:hint="@string/password_hint_text"
+        android:gravity="center_vertical"
+        android:inputType="textPassword"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+    />
+
+    <TextView
+        android:id="@+id/login_error_msg"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginHorizontal="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/rectangle_pw"
+        android:text="@string/login_error_msg"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:visibility="invisible"
+        android:textColor="#D44646"
+        />
+
+    <TextView
+        android:id="@+id/login_error_msg_id"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginHorizontal="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/rectangle_pw"
+        android:text="존재하지 않는 아이디입니다."
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:visibility="invisible"
+        android:textColor="#D44646"
+        />
+
+    <TextView
+        android:id="@+id/login_error_msg_pw"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="55dp"
+        android:layout_below="@id/rectangle_pw"
+        android:text="비밀번호가 일치하지 않습니다."
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:visibility="invisible"
+        android:textColor="#D44646"
+        />
+
+    <TextView
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="55dp"
+        android:layout_below="@+id/rectangle_pw"
+        android:layout_marginTop="34dp"
+        android:background="#D3EBC0"
+        android:text="@string/login"
+        android:gravity="center"
+        />
+
+    <View
+        android:id="@+id/login_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/login_btn"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_line"
+        />
+
+    <!--<com.google.android.gms.common.SignInButton
+        android:id="@+id/google_login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_line"
+        android:layout_alignEnd="@+id/registration"
+        android:layout_marginTop="5dp"
+        />
+
+    <View
+        android:id="@+id/google_login_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/google_login_btn"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/login_line"
+        />-->
+
+    <TextView
+        android:id="@+id/registration"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:text="회원가입"
+        android:layout_below="@+id/login_line"
+        android:layout_alignEnd="@id/login_line"
+        android:layout_marginTop="18dp"
+        android:textAlignment="textEnd"
+        android:textColor="#114DE7"
+    />
+
+    <TextView
+        android:id="@+id/change_pw"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:text="비밀번호 변경"
+        android:layout_below="@+id/login_line"
+        android:layout_toStartOf="@id/registration"
+        android:layout_marginTop="18dp"
+        android:textAlignment="textEnd"
+        android:textColor="#114DE7"
+    />
+
+    <!--<TextView
+        android:id="@+id/find_id"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:text="아이디 찾기"
+        android:layout_below="@+id/google_login_line"
+        android:layout_toStartOf="@id/find_pw"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:textAlignment="textEnd"
+        android:textColor="#114DE7"
+    />-->
+
+
+</RelativeLayout>

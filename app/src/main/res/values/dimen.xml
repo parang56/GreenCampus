@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="SearchLayoutWight">350dp</dimen>
+    <dimen name="SearchLayoutHeight">100dp</dimen>
+    <dimen name="SearchLayoutImage">60dp</dimen>
+    <dimen name="SearchLayoutMargin">10dp</dimen>
+    <dimen name="PostLayoutMargin">10dp</dimen>
+    <dimen name="PostLayoutMiniMargin">3dp</dimen>
+    <dimen name="PostLayoutHeight">100dp</dimen>
+    <dimen name="PostImage">90dp</dimen>
+    <dimen name="PostMargin">10dp</dimen>
+    <dimen name="HeartSize">15dp</dimen>
+    <dimen name="ExpW">300dp</dimen>
+    <dimen name="ExpH">20dp</dimen>
+    <dimen name="BlockLayoutHeight">70dp</dimen>
+    <dimen name="MiniProFileImg">50dp</dimen>
+    <dimen name="dp1">1dp</dimen>
+</resources>

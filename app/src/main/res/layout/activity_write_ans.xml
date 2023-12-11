@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WriteAns"
+    android:background="#EEF0EF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="14dp"
+        android:layout_marginHorizontal="15dp">
+
+        <ImageButton
+            android:id="@+id/write_ans_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="#EEF0EF"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="답변 작성" />
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/write_ans_contentOfQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="20dp"
+                android:textSize="16sp"
+                android:text="문제 내용"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="22dp"
+                android:id="@+id/write_ans_textOfMakingAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:hint="텍스트를 입력하세요"
+                android:background="#D6D7D7"
+                android:padding="8dp"
+                android:gravity="top|start"/>
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="20dp"
+                android:text="이미지"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageButton
+                android:layout_marginTop="8dp"
+                android:id="@+id/write_ans_insertImage"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:scaleType="centerInside"
+                android:layout_height="180dp" />
+
+            <TextView
+                android:id="@+id/write_ans_finishBtn"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:background="#D3EBC0"
+                android:text="완료"
+                android:gravity="center"
+                android:layout_marginVertical="30dp"
+                android:layout_marginHorizontal="20dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

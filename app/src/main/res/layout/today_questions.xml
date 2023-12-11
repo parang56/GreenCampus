@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#EEF0EF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:background="#EEF0EF"
+        android:padding="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/backButton"
+        android:text="오늘의 인기 질문"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/backButton"
+        android:layout_marginTop="8dp"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:layout_below="@id/line"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bar"
+        android:layout_height="100dp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/barMain"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#D9D9D9"
+            android:padding="2dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/main" />
+
+        <ImageButton
+            android:id="@+id/barScape"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#D9D9D9"
+            android:padding="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/scrap" />
+
+        <ImageButton
+            android:id="@+id/barNotification"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#D9D9D9"
+            android:scaleType="centerInside"
+            android:src="@drawable/notification" />
+
+        <ImageButton
+            android:id="@+id/barMyProfile"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#D9D9D9"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/my_profile" />
+    </LinearLayout>
+
+</RelativeLayout>

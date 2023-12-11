@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/question_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="84dp"
+    android:layout_marginBottom="10dp">
+    <ImageView
+        android:id="@+id/question_item_imageOfWriter"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/basic_profile_s"
+        />
+
+    <TextView
+        android:id="@+id/question_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="작성자"
+        android:layout_toEndOf="@id/question_item_imageOfWriter"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="6dp" />
+
+    <ImageView
+        android:id="@+id/question_item_heart_empty"
+        android:layout_toEndOf="@id/question_item_title"
+        android:layout_width="16dp"
+        android:layout_height="19dp"
+        android:layout_gravity="center_vertical"
+        android:layout_alignBottom="@+id/question_item_title"
+        android:background="@drawable/heart_empty"
+        />
+
+    <ImageView
+        android:id="@+id/question_item_heart"
+        android:layout_width="16dp"
+        android:layout_toEndOf="@id/question_item_title"
+        android:layout_height="19dp"
+        android:layout_gravity="center_vertical"
+        android:layout_alignBottom="@+id/question_item_title"
+        android:background="@drawable/heart"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/question_item_heartNum"
+        android:layout_toEndOf="@id/question_item_title"
+        android:layout_width="wrap_content"
+        android:layout_alignBottom="@+id/question_item_title"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:text="숫자"/>
+
+    <TextView
+        android:id="@+id/question_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="4dp"
+        android:text="content"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:layout_below="@id/question_item_title"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="80dp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop"
+        android:id="@+id/question_item_image"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_marginTop="83dp"
+        />
+</RelativeLayout>

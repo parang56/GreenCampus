@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF0EF">
+
+    <View
+        android:id="@+id/back_arrow"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/back_arrow"
+        />
+
+    <TextView
+        android:id="@+id/terms_and_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"
+        android:text="약관 동의"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        />
+
+    <TextView
+        android:id="@+id/terms_intro_rectangle"
+        android:layout_width="300dp"
+        android:layout_height="66dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/terms_and_conditions"
+        android:layout_marginTop="45dp"
+        android:background="#D3EBC0"
+        android:text="@string/terms_intro"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        />
+
+    <CheckBox
+        android:id="@+id/check_all"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="42dp"
+        android:layout_below="@+id/terms_intro_rectangle"
+        android:layout_marginTop="45dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_alignTop="@+id/check_all"
+        android:layout_alignBottom="@+id/check_all"
+        android:layout_toEndOf="@+id/check_all"
+        android:gravity="center"
+        android:text="전체 동의"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/check_all_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/check_all"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/login_line"
+        android:layout_marginStart="84dp"
+        />
+
+    <CheckBox
+        android:id="@+id/check_terms"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="42dp"
+        android:layout_below="@+id/check_all_line"
+        android:layout_marginTop="24dp"
+        />
+
+    <TextView
+        android:id="@+id/must"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_alignTop="@+id/check_terms"
+        android:layout_alignBottom="@+id/check_terms"
+        android:layout_toEndOf="@+id/check_terms"
+        android:gravity="center"
+        android:text="(필수)"
+        android:textColor="#D44646"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_alignTop="@+id/must"
+        android:layout_alignBottom="@+id/must"
+        android:layout_toEndOf="@+id/must"
+        android:gravity="center"
+        android:text="이용약관 동의"
+        android:textStyle="bold"
+        />
+
+    <CheckBox
+        android:id="@+id/check_conditions"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="42dp"
+        android:layout_below="@+id/check_terms"
+        android:layout_marginTop="24dp"
+        />
+
+    <TextView
+        android:id="@+id/must2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_alignTop="@+id/check_conditions"
+        android:layout_alignBottom="@+id/check_conditions"
+        android:layout_toEndOf="@+id/check_conditions"
+        android:gravity="center"
+        android:text="(필수)"
+        android:textColor="#D44646"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_alignTop="@+id/must2"
+        android:layout_alignBottom="@+id/must2"
+        android:layout_toEndOf="@+id/must2"
+        android:gravity="center"
+        android:text="개인정보 수집 및 이용 동의"
+        android:textStyle="bold"
+        />
+
+    <View
+        android:id="@+id/terms_details_arrow"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignTop="@+id/must"
+        android:layout_alignBottom="@+id/must"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="46dp"
+        android:background="@drawable/details_arrow"
+        />
+
+    <View
+        android:id="@+id/conditions_details_arrow"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignTop="@+id/must2"
+        android:layout_alignBottom="@+id/must2"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="46dp"
+        android:background="@drawable/details_arrow"
+        />
+
+    <View
+        android:id="@+id/check_individual_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/check_conditions"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/login_line"
+        android:layout_marginStart="84dp"
+        />
+
+    <CheckBox
+        android:id="@+id/check_advertise"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="42dp"
+        android:layout_below="@+id/check_individual_line"
+        android:layout_marginTop="24dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_alignTop="@+id/check_advertise"
+        android:layout_alignBottom="@+id/check_advertise"
+        android:layout_toEndOf="@+id/check_advertise"
+        android:gravity="center"
+        android:text="(선택) 광고성 정보 수신 동의"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/warning_text"
+        android:layout_width="280dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/check_advertise"
+        android:layout_marginTop="22dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/warning_text"
+        android:textAppearance="@style/warning_text"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/error_msg"
+        android:layout_width="280dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/warning_text"
+        android:layout_centerHorizontal="true"
+        android:text="필수 항목에 전부 동의하셔야 넘어가실 수 있습니다."
+        android:textAppearance="@style/warning_text"
+        android:textColor="#D44646"
+        android:visibility="invisible"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/warning_text"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginBottom="30dp"
+        android:background="#D3EBC0"
+        android:text="다음"
+        android:gravity="center"
+        />
+
+
+</RelativeLayout>

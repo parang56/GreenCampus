@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailOfAnswer"
+    android:id="@+id/root_view"
+    android:background="#EEF0EF">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/detail_of_ans_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="#EEF0EF"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/back" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_marginTop="4dp" />
+
+    <LinearLayout
+        android:id="@+id/image_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/detail_of_ans_image"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:visibility="visible">
+        </ImageView>
+
+        <View
+            android:id="@+id/line_image"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp">
+        <ImageView
+            android:id="@+id/detail_of_ans_profileImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="20dp"
+            android:maxWidth="20dp"
+            android:src="@drawable/basic_profile_s"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/detail_of_ans_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사람이름"/>
+        <!--<ImageView
+            android:id="@+id/question_item_heart_empty"
+            android:layout_width="20dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/heart_empty"
+            />
+        <ImageView
+            android:id="@+id/question_item_heart"
+            android:layout_width="17dp"
+            android:layout_height="16.8dp"
+            android:layout_marginStart="1.5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/heart"
+            android:visibility="gone"/>-->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/detail_of_ans_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="내용 들어갈 곳"
+        android:layout_marginBottom="6dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#000000"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/detail_of_ans_addText"
+            android:layout_width="wrap_content"
+            android:hint="댓글을 입력하세요"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/detail_of_ans_addTextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="등록"/>
+    </LinearLayout>-->
+
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF0EF">
+
+    <View
+        android:id="@+id/back_arrow"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/back_arrow"
+        />
+
+    <TextView
+        android:id="@+id/terms_and_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"
+        android:text="개인 정보 수집 및 이용"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/terms_and_conditions"
+        android:layout_marginTop="45dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:paddingBottom="150dp"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+
+            android:background="#D9D9D9"
+
+            android:clipToOutline="true">
+
+            <TextView
+                android:id="@+id/terms_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:text="@string/terms"
+                android:textSize="11sp"
+                android:gravity="top"
+                android:layout_marginTop="8dp"
+                />
+
+        </FrameLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="30dp"
+        android:background="#D3EBC0"
+        android:text="확인"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

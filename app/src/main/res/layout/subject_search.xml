@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#EEF0EF"
+    android:onClick="OnClick"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:background="#EEF0EF"
+        android:padding="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#000000"
+        android:layout_toRightOf="@+id/backButton"
+        android:text="과목 추가"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/backButton"
+        android:layout_marginTop="8dp"
+        android:background="#000000" />
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_rectangle"
+        android:hint="과목을 입력해주세요"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:textSize="14dp" />
+
+    <ImageButton
+        android:id="@+id/searchButton"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/search"
+        android:layout_alignRight="@+id/search"
+        android:layout_alignBottom="@+id/search"
+        android:layout_marginRight="10dp"
+        android:background="#00FFFFFF"
+        android:scaleType="centerInside"
+        android:src="@drawable/search" />
+
+    <TextView
+        android:id="@+id/add_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="찾는 과목이 없으신가요?"
+        android:layout_below="@+id/searchButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="14dp"
+        android:textColor="#114DE7"
+        />
+
+    <TextView
+        android:id="@+id/searchResultCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchButton"
+        android:text="검색 결과 : 0건"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        android:textSize="10sp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@+id/searchResultCount"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:onClick="OnClick"
+            android:id="@+id/searchResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+    <requestFocus/>
+</RelativeLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "740135058035",
+    "project_id": "fir-test-bcf9a",
+    "storage_bucket": "fir-test-bcf9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740135058035:android:b2ac57c2baa80f1dc00806",
+        "android_client_info": {
+          "package_name": "com.example.carrotchegg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDag_SebQ3d0Z0TJaBnGLRvntR9QAu8Tg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EEF0EF">
+
+    <View
+        android:id="@+id/back_arrow"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/back_arrow"
+        />
+
+    <TextView
+        android:id="@+id/enter_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"
+        android:text="정보 입력"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout_nickname"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/enter_info"
+        android:layout_marginTop="32dp"
+        android:hint="닉네임"
+        app:boxBackgroundMode="filled">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rectangle_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEF0EF"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:inputType="text"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/error_msg_nickname_eng"
+        android:layout_width="300dp"
+        android:layout_height="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textInputLayout_nickname"
+        android:text="@string/error_msg_nickname_eng"
+        android:textColor="#D44646"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        android:gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/error_msg_nickname_kor"
+        android:layout_width="300dp"
+        android:layout_height="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textInputLayout_nickname"
+        android:text="@string/error_msg_nickname_kor"
+        android:textColor="#D44646"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        android:gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/error_msg_nickname_both"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textInputLayout_nickname"
+        android:text="@string/error_msg_nickname_both"
+        android:textColor="#D44646"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        android:gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/error_msg_nickname_conflict"
+        android:layout_width="300dp"
+        android:layout_height="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textInputLayout_nickname"
+        android:text="이미 존재하는 닉네임입니다."
+        android:textColor="#D44646"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        android:gravity="center_vertical"
+        />
+
+
+    <TextView
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textInputLayout_nickname"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+        android:background="#D3EBC0"
+        android:text="확인"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

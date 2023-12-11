@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF0EF">
+
+    <TextView
+        android:id="@+id/my_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="20dp"
+        android:text="내 정보"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/my_profile"
+        android:layout_marginTop="8dp"
+        android:background="#000000" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bar"
+        android:layout_below="@+id/line">
+
+        <LinearLayout
+            android:id="@+id/postListLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="30dp"
+                android:background="#70AB9D9D">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/myPhoto"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/basic_profile_s"
+                        android:layout_marginTop="20dp" />
+
+                    <ImageView
+                        android:id="@+id/changePhoto"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignEnd="@+id/myPhoto"
+                        android:layout_alignBottom="@id/myPhoto"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/plus_btn"
+                        />
+
+                    <TextView
+                        android:id="@+id/nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myPhoto"
+                        android:layout_alignStart="@id/myPhoto"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/questionList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:layout_toEndOf="@+id/myPhoto"
+                        android:textAlignment="center"
+                        android:onClick="OnClick"
+                        android:layout_marginTop="40dp"
+                        android:text="0\n질문 수"
+                        android:textColor="#49454F"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/answerList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/questionList"
+                        android:textAlignment="center"
+                        android:layout_alignTop="@+id/questionList"
+                        android:onClick="OnClick"
+                        android:text="0\n답변 수"
+                        android:layout_marginStart="30dp"
+                        android:textColor="#49454F"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/align_right"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp">
+                    </View>
+
+                    <EditText
+                        android:id="@+id/introduction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nickname"
+                        android:layout_marginHorizontal="20dp"
+                        android:inputType="textMultiLine"
+                        android:maxLines="3"
+                        android:ellipsize="end"
+                        android:background="@null"
+                        android:text="안녕하세요!"
+                        android:gravity="top|start"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="10dp"
+                        android:maxLength="120" />
+                </RelativeLayout>
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="30dp"
+                android:background="#70AB9D9D">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginTop="20dp"
+                        android:text="현재 레벨 : "
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/needExp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/level"
+                        android:layout_alignLeft="@+id/level"
+                        android:layout_marginTop="5dp"
+                        android:text="다음 레벨까지 필요한 경험치 : "
+                        android:textAlignment="center" />
+
+                    <FrameLayout
+                        android:id="@+id/expBarLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_below="@id/needExp"
+                        android:layout_marginTop="8dp"
+                        android:layout_centerHorizontal="true"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:background="#FFFFFF" />
+
+                        <ImageView
+                            android:id="@+id/expBar"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="#D3EBC0" />
+
+                        <TextView
+                            android:id="@+id/expPercent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="10dp"
+                            android:text="0%" />
+                    </FrameLayout>
+                </RelativeLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="30dp"
+                android:background="#70AB9D9D">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginTop="20dp"
+                        android:text="로그아웃"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/alarmSetting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/logout"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginTop="20dp"
+                        android:background="#00000000"
+                        android:onClick="OnClick"
+                        android:text="푸쉬 알림 설정"
+                        android:textColor="#49454F"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/alarmSetting2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/alarmSetting"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginTop="20dp"
+                        android:background="#00000000"
+                        android:onClick="OnClick"
+                        android:text="앱 내 알림 설정"
+                        android:textColor="#49454F"
+                        android:textStyle="bold" />
+
+                   <!-- <TextView
+                        android:id="@+id/blockList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/alarmSetting"
+                        android:layout_alignLeft="@+id/alarmSetting"
+                        android:layout_marginTop="20dp"
+                        android:background="#00000000"
+                        android:onClick="OnClick"
+                        android:text="차단 목록"
+                        android:textColor="#49454F"
+                        android:textStyle="bold" />-->
+
+                    <TextView
+                        android:id="@+id/deleteAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/alarmSetting2"
+                        android:layout_alignLeft="@+id/alarmSetting"
+                        android:layout_marginTop="20dp"
+                        android:background="#00000000"
+                        android:onClick="OnClick"
+                        android:text="계정 탈퇴"
+                        android:textColor="#49454F"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/bar"
+        android:layout_marginTop="8dp"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/barMain"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#D9D9D9"
+            android:padding="2dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/main" />
+
+        <ImageButton
+            android:id="@+id/barScape"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#D9D9D9"
+            android:padding="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/scrap" />
+
+        <ImageButton
+            android:id="@+id/barNotification"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#D9D9D9"
+            android:scaleType="centerInside"
+            android:src="@drawable/notification" />
+
+        <ImageButton
+            android:id="@+id/barMyProfile"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#C0C0C0"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/my_profile" />
+
+    </LinearLayout>
+
+</RelativeLayout>

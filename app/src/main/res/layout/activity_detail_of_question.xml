@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_of_quest_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF0EF"
+    tools:context=".DetailOfQuestion">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/detail_of_quest_back"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:background="#EEF0EF"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/back" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/detail_of_quest_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="14dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="200dp"
+                android:maxHeight="30dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/tripledot" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="#000000" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/image_rectangle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/plus" />
+
+                        <ImageView
+                            android:id="@+id/detail_of_quest_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="240dp"
+                            android:visibility="visible"></ImageView>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/line_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="4dp"
+                        android:background="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:id="@+id/detail_of_quest_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="제목"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detail_of_quest_subject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="과목명" />
+
+                    <TextView
+                        android:id="@+id/detail_of_quest_numOfViews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="조회수" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:id="@+id/other_profile"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/detail_of_quest_imageOfWriter"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/basic_profile_s"
+                            />
+
+                        <TextView
+                            android:id="@+id/detail_of_quest_nameOfWriter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="작성자이름"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/detail_of_quest_maketime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:text="작성일자" />
+                </LinearLayout>
+
+                <!--<View
+                android:id="@+id/line_detail"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:background="#000000"
+                android:layout_marginTop="3dp"
+                android:layout_marginHorizontal="20dp"/>-->
+
+                <TextView
+                    android:id="@+id/detail_of_quest_sentence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:text="1111111내용" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="8dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/heart"
+                            android:layout_width="20dp"
+                            android:layout_height="23dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/heart_empty" />
+
+                        <ImageView
+                            android:id="@+id/scrap"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="30dp"
+                            android:src="@drawable/scrap" />
+
+                        <TextView
+                            android:id="@+id/detail_of_quest_makeAnsBtn"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="end"
+                            android:background="#D3EBC0"
+                            android:gravity="center"
+                            android:text="답변 작성" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/detail_of_quest_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1">
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</FrameLayout>
